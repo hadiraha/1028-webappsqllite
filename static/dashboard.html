@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+
+<body>
+  <script>
+if (!localStorage.getItem("token")) {
+    window.location = "/static/login.html";
+}
+</script>
+<h2>Companies Table</h2>
+
+<button onclick="logout()">Logout</button>
+
+<input type="file" id="file" />
+<button onclick="uploadExcel()">Upload Excel</button>
+
+<table id="tbl" class="display" style="width:100%">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>index</th>
+      <th>نام فارسی</th>
+      <th>Name EN</th>
+      <th>Website</th>
+      <th>File#</th>
+      <th>Sector</th>
+      <th>Country</th>
+    </tr>
+    <tr class="filters">
+      <th></th>
+      <th><input type="text" placeholder="Search Index"></th>
+      <th><input type="text" placeholder="جستجو نام فارسی"></th>
+      <th><input type="text" placeholder="Search EN"></th>
+      <th><input type="text" placeholder="Search Website"></th>
+      <th><input type="text" placeholder="Search File#"></th>
+      <th><input type="text" placeholder="Search Sector"></th>
+      <th><input type="text" placeholder="Search Country"></th>
+    </tr>
+  </thead>
+</table>
+
+<script src="/static/script.js"></script>
+</body>
+</html>

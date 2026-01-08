@@ -1,0 +1,28 @@
+table.dataTable thead input {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 3px;
+}
+
+h2 {
+  background: #055d85;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+button {
+  background: #055d85;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+.filters th {
+  padding: 4px;
+}
+.filters input {
+  width: 100%;
+  padding: 4px;
+}
