@@ -5,7 +5,6 @@ import webbrowser
 from app.utils import base_path
 
 # ----------------------------------------
-# Fix broken stdio in PyInstaller EXE
 # ----------------------------------------
 if sys.stdout is None:
     sys.stdout = open(os.devnull, "w")
@@ -31,7 +30,7 @@ try:
         host="127.0.0.1",
         port=8000,
 
-        # 🔥 CRITICAL FLAGS
+        #CRITICAL FLAGS
         log_config=None,      # disable logging config
         access_log=False,     # disable access logger
         use_colors=False,     # avoid stdout.isatty()
