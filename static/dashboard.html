@@ -2,9 +2,9 @@
 <html>
 <head>
   <title>Dashboard</title>
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+  <script src="/static/vendor/jquery/jquery.min.js"></script>
+  <script src="/static/vendor/datatables/jquery.dataTables.min.js"></script>
+  <link rel="stylesheet" href="/static/vendor/datatables/jquery.dataTables.min.css">
   <link rel="stylesheet" href="/static/styles.css">
 </head>
 
@@ -20,6 +20,9 @@ if (!localStorage.getItem("token")) {
 
 <input type="file" id="file" />
 <button onclick="uploadExcel()">Upload Excel</button>
+<button onclick="deleteAll()" style="background:#b30000">
+  ❌ Delete ALL Data
+</button>
 
 <table id="tbl" class="display" style="width:100%">
   <thead>
@@ -29,6 +32,8 @@ if (!localStorage.getItem("token")) {
       <th>نام فارسی</th>
       <th>Name EN</th>
       <th>Website</th>
+      <th>Website Desc</th>
+      <th>Magazine Desc</th>
       <th>File#</th>
       <th>Sector</th>
       <th>Country</th>
@@ -39,6 +44,8 @@ if (!localStorage.getItem("token")) {
       <th><input type="text" placeholder="جستجو نام فارسی"></th>
       <th><input type="text" placeholder="Search EN"></th>
       <th><input type="text" placeholder="Search Website"></th>
+      <th><input type="text" placeholder="Website Desc"></th>
+      <th><input type="text" placeholder="Magazine Desc"></th>      
       <th><input type="text" placeholder="Search File#"></th>
       <th><input type="text" placeholder="Search Sector"></th>
       <th><input type="text" placeholder="Search Country"></th>

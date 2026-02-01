@@ -10,7 +10,7 @@ class Company(Base):
     website = Column(Text)
     website_desc = Column(Text)
     magazine_desc = Column(Text)
-    file_number = Column(Integer)  # Like 20251201
+    file_number = Column(String) 
     sector = Column(String(255))
     country = Column(String(255))
 

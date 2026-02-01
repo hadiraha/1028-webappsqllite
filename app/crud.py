@@ -10,6 +10,10 @@ def create_user(db: Session, data: schemas.UserCreate):
     db.refresh(user)
     return user
 
+def delete_all_companies(db: Session):
+    db.query(models.Company).delete()
+    db.commit()
+
 def get_companies(db: Session):
     return db.query(models.Company).all()
 

@@ -8,17 +8,14 @@ class CompanyBase(BaseModel):
     website: Optional[str] = None
     website_desc: Optional[str] = None
     magazine_desc: Optional[str] = None
-    file_number: Optional[int] = None
+    file_number: Optional[str] = None
     sector: Optional[str] = None
     country: Optional[str] = None
 
 class CompanyCreate(CompanyBase):
     pass
 
-class CompanyResponse(CompanyBase):
-    id: int
-    class Config:
-        orm_mode = True
+    sector: Optional[str] = None
 
 
 class UserCreate(BaseModel):

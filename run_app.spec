@@ -3,7 +3,7 @@ from PyInstaller.utils.hooks import collect_all
 
 datas = [('.env', '.'), ('app', 'app'), ('static', 'static')]
 binaries = []
-hiddenimports = ['sqlite3', 'uvicorn.logging', 'uvicorn.protocols.http', 'uvicorn.protocols.websockets', 'uvicorn.lifespan']
+hiddenimports = ['sqlite3']
 tmp_ret = collect_all('fastapi')
 datas += tmp_ret[0]; binaries += tmp_ret[1]; hiddenimports += tmp_ret[2]
 tmp_ret = collect_all('starlette')

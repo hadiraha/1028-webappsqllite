@@ -1,28 +1,76 @@
-table.dataTable thead input {
-  width: 100%;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  padding: 3px;
+@font-face {
+  font-family: "Vazirmatn";
+  src: url("/static/fonts/Vazirmatn-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
+/* =========================
+   Global Defaults
+   ========================= */
+body {
+  font-family: "Vazirmatn", Tahoma, Arial, sans-serif;
+}
+
+/* =========================
+   RTL helper class
+   ========================= */
+.rtl {
+  direction: rtl;
+  text-align: right;
+  unicode-bidi: isolate;
+}
+
+/* =========================
+   DataTable layout
+   ========================= */
+table.dataTable {
+  font-size: 14px;
+}
+
+table.dataTable td {
+  line-height: 1.6;
+}
+
+/* =========================
+   Filters row
+   ========================= */
+thead tr.filters th {
+  padding: 4px;
+  pointer-events: auto;
+}
+
+thead tr.filters th input {
+  width: 100%;
+  padding: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  pointer-events: auto;
+}
+
+/* =========================
+   Headings
+   ========================= */
 h2 {
   background: #055d85;
-  color: white;
+  color: #ffffff;
   padding: 10px;
   border-radius: 5px;
 }
 
+/* =========================
+   Buttons
+   ========================= */
 button {
   background: #055d85;
-  color: white;
+  color: #ffffff;
   border: none;
   border-radius: 4px;
+  padding: 6px 10px;
+  cursor: pointer;
 }
 
-.filters th {
-  padding: 4px;
-}
-.filters input {
-  width: 100%;
-  padding: 4px;
+button:hover {
+  opacity: 0.9;
 }
